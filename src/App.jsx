@@ -2,6 +2,7 @@ import "./App.css";
 import AboutMe from "./components/AboutMe";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import Skills from "./components/Skills";
 import { useTheme } from "./context/themeContext";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Navbar />
         <Home />
         <AboutMe />
+        <Skills/>
       </div>
     </div>
   );

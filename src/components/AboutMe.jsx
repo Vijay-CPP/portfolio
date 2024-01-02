@@ -1,6 +1,5 @@
 import React from "react";
 import profilePic from "../assets/profile-pic.jpg";
-import { Link } from "react-router-dom";
 
 const AboutMe = () => {
   return (
@@ -25,23 +24,17 @@ const AboutMe = () => {
             <p className="text-violet-800 w-fit rounded py-1 px-2 text-sm dark:text-violet-600 bg-violet-50 dark:bg-violet-900/10">
               Full Stack Developer
             </p>
-            <p className="text-sm md:text-base my-2 text-gray-600 dark:text-gray-300">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam hic minima fugit eos alias maiores eius, porro repudiandae laudantium libero ea quas quis vitae quidem blanditiis similique, tenetur esse vel.
+            <p className="text-sm md:text-base my-2 text-gray-600 dark:text-gray-300 text-justify">
+            Final year undergrad pursuing a Bachelor of Technology (Hons.) in Electrical Engineering at Haldia Institute of Technology, maintaining a consistent CGPA of 9.41. Proficient in C/C++, JavaScript, and Python, my expertise spans both frontend and backend technologies. Well-versed in Git, GitHub, Linux, and Visual Studio Code, I'm passionate about creating beautiful, functional, and user-friendly websites and applications. Beyond technical skills, I bring a dynamic and collaborative problem-solving approach. Connect with me on LinkedIn or explore my coding profiles on LeetCode, GitHub, and GFG Practice for a closer look at my passion, skills, and achievements.
             </p>
             <div className="flex items-center gap-4 md:mt-4">
               {/* {resumeUrl.trim() && ( */}
                 <a
                   href={""}
+                  target="_blank"
                   className="text-sm md:text-base bg-violet-600 dark:bg-violet-700 text-white w-fit rounded-md py-2 px-6 hover:shadow-xl transition-shadow"
                 >
                   Resume
-                </a>
-              {/* )} */}
-              {/* {callUrl.trim() && ( */}
-                <a
-                  to={""}
-                  className="text-violet-600 flex items-center gap-1 hover:bg-violet-50 hover:dark:bg-violet-900/10 py-2 px-4 transition-colors rounded-md"
-                >
                 </a>
               {/* )} */}
             </div>
