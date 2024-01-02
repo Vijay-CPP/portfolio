@@ -11,9 +11,7 @@ function App() {
     <div className={`${theme === "dark" ? "dark" : ""}`}>
       <div className="dark:bg-gray-900 transition-all ease-in-out">
         <Navbar />
-        
         <Home />
-        
         <AboutMe />
       </div>
     </div>

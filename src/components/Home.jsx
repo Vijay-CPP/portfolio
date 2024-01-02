@@ -40,12 +40,12 @@ const Home = () => {
   };
 
   useEffect(() => {
-    const avatarInterval = setInterval(cycleAvatars, 1500);
+    const avatarInterval = setInterval(cycleAvatars, 2000);
     return () => clearInterval(avatarInterval);
   }, []);
 
   return (
-    <div className="flex flex-col-reverse container mx-auto h-screen lg:flex-row lg:justify-around justify-center items-center gap-8 lg:gap-0">
+    <div className="flex flex-col-reverse container mx-auto h-screen lg:flex-row lg:justify-around justify-center items-center gap-8 lg:gap-0" id="Home">
       <div className="flex flex-col lg:w-[45%] w-[85%]">
         <div className="flex items-center gap-2 mb-1">
           <img src={wavingHand} className="w-8 h-8" alt="👋" />

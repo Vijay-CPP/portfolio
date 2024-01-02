@@ -37,7 +37,7 @@ const Navbar = () => {
     <div
       className={`fixed w-[100vw] backdrop-blur-md  ${
         scroll ? "border-b bg-opacity-40" : "border-b-0"
-      } dark:bg-opacity-40 border-gray-200 dark:border-b-0`}
+      } dark:bg-opacity-40 border-gray-200 dark:border-b-0 z-50`}
     >
       <div className="flex justify-between lg:container p-5 lg:py-3 lg:px-10 items-center mx-auto">
         <div className="text-xl text-gray-700 flex gap-1 font-robotoMono">
@@ -72,9 +72,9 @@ const Navbar = () => {
           <div
             className={`p-2 rounded-full ${
               theme === "dark"
-                ? "hover:bg-violet-500 text-white bg-gray-700"
-                : "bg-white hover:shadow-gray-200 border"
-            } transition-all shadow-lg`}
+                ? "hover:bg-violet-500 text-white bg-gray-700 border-gray-800"
+                : "bg-white hover:shadow-gray-200"
+            } transition-all shadow-lg border`}
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           >
             {theme === "light" ? <LuMoon /> : <FiSun />}
