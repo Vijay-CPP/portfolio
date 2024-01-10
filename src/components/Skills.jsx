@@ -21,7 +21,7 @@ const Skills = () => {
   const [index, setIndex] = useState(0);
 
   return (
-    <div className="container mx-auto min-h-screen md:min-h-[70vh] pt-20 md:pt-12" id="Skills">
+    <div className="container mx-auto min-h-fit py-20" id="Skills">
       <h2 className="text-4xl text-center text-gray-800 dark:text-white font-robotoMono">
         Tech Stack
       </h2>
@@ -30,6 +30,7 @@ const Skills = () => {
         {SKILL_CATEGORY.map((element, idx) => {
           return (
             <div
+            key={idx}
               onClick={() => setIndex(idx)}
               className={` ${
                 index === idx
@@ -45,7 +46,7 @@ const Skills = () => {
 
       <div className="flex flex-wrap w-[90vw] md:w-[60vw] lg:w-[40vw] mx-auto mt-6 gap-2 justify-center">
         {SKILLS_NAMES[index].map((element, idx) => {
-          return <div className="px-8 py-3 rounded-md hover:bg-violet-500 hover:text-white transition-all ease-in-out dark:hover:bg-violet-500 bg-gray-200 dark:bg-gray-700 dark:text-white hover:-translate-y-2 duration-300">{element}</div>;
+          return <div key={idx} className="px-8 py-3 rounded-md hover:bg-violet-500 hover:text-white transition-all ease-in-out dark:hover:bg-violet-500 bg-gray-200 dark:bg-gray-700 dark:text-white hover:-translate-y-[1px] duration-300">{element}</div>;
         })}
       </div>
     </div>

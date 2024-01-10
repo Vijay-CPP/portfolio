@@ -1,8 +1,12 @@
 import "./App.css";
 import AboutMe from "./components/AboutMe";
+import Contact from "./components/Contact";
+import Experience from "./components/Experience";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
+import Projects from "./components/Projects";
 import Skills from "./components/Skills";
+import Footer from "./components/Footer";
 import { useTheme } from "./context/themeContext";
 
 function App() {
@@ -15,6 +19,10 @@ function App() {
         <Home />
         <AboutMe />
         <Skills />
+        <Projects/>
+        <Experience/>
+        <Contact/>
+        <Footer/>
       </div>
     </div>
   );
