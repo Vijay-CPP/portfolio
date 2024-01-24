@@ -44,8 +44,8 @@ const AboutMe = () => {
         About Me
       </h2>
 
-      <div className="w-full lg:w-11/12 2xl:w-4/5 mt-6 lg:mt-8 mx-auto flex flex-col md:gap-4 lg:flex-row justify-center items-center">
-        <div className="p-3 w-56 md:w-2/5 lg:w-72 bg-white shadow-md dark:bg-gray-800 flex flex-col gap-2 items-center rounded-2xl mx-auto lg:mx-16 hover:-translate-y-2 transition-transform duration-300 lg:-rotate-3">
+      <div className="w-full lg:w-11/12 2xl:w-4/5 mt-6 lg:mt-8 mx-auto flex flex-col md:gap-4 lg:flex-row justify-center">
+        <div className="p-3 h-fit w-56 md:w-2/5 lg:w-72 bg-white shadow-md dark:bg-gray-800 flex flex-col gap-2 items-center rounded-2xl mx-auto lg:mx-16 hover:-translate-y-2 transition-transform duration-300 lg:-rotate-3">
           <img
             src={profilePic}
             alt="profile-pic"
@@ -75,24 +75,24 @@ const AboutMe = () => {
             </p>
 
             <div class="py-2">
-              <h1 class="text-xl text-violet-700 dark:text-violet-400 font-robotoMono pb-2">
+              <h1 class="text-xl text-violet-700 dark:text-violet-400 font-robotoMono pb-4">
                 Education
               </h1>
-              <div class="flex flex-wrap">
+              <div class="flex flex-wrap gap-5">
                 {EDUCATION.slice(0, eduLength).map((data, idx) => {
                   return (
                     <div
-                      class="flex-shrink-0 flex-grow-0 w-full md:w-1/2 p-2"
+                      class="flex-shrink-0 flex-grow-0 w-full md:w-fit"
                       key={idx}
                     >
-                      <div class="bg-white dark:bg-gray-800 rounded-lg p-4 border dark:border-gray-700 hover:shadow-md transition duration-300 ease-in-out">
+                      <div class="bg-gray-100 dark:bg-gray-800 rounded-lg py-4 px-5 border dark:border-gray-900 hover:shadow-md transition duration-300 ease-in-out shadow-sm">
                         <p class="text-gray-700 dark:text-gray-300 text-md font-semibold">
                           {data.year}
                         </p>
                         <p class="text-gray-700 dark:text-gray-300 text-lg">
                           {data.instituteName}
                         </p>
-                        <p class="text-gray-700 dark:text-gray-300">
+                        <p class="text-gray-700 text-sm dark:text-gray-300">
                           {data.courseName}
                         </p>
                         <p class="text-gray-700 dark:text-gray-300">
@@ -104,7 +104,7 @@ const AboutMe = () => {
                 })}
               </div>
               <div>
-                  <button onClick={() => handleEduClick()}>
+                  <button className=" text-gray-700 border border-gray-400 px-3 py-1 rounded-md mt-4 dark:text-gray-400 dark:border-gray-700" onClick={() => handleEduClick()}>
                     {eduLength === 2 ? "Show All" : "Ok I got it!"}
                   </button>
                 </div>

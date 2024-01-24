@@ -47,7 +47,7 @@ const Home = () => {
 
   return (
     <div
-      className="flex flex-col-reverse container mx-auto h-screen lg:flex-row lg:justify-around justify-center items-center gap-8 lg:gap-0"
+      className="flex flex-col-reverse container mx-auto min-h-screen lg:flex-row lg:justify-around justify-center items-center gap-8 lg:gap-0 py-20"
       id="Home"
     >
       <div className="flex flex-col lg:w-[45%] w-[85%]">
@@ -98,7 +98,7 @@ const Home = () => {
           <a
             href={""}
             target="_blank"
-            className="md:text-base font-semibold text-violet-600 dark:bg-violet-700 border-violet-600 border w-fit rounded-md py-2 hover:bg-violet-600 hover:text-white px-4 transition-all ease-in-out flex gap-1 items-center justify-around"
+            className="md:text-base font-semibold text-violet-600 dark:bg-gray-700 border-violet-600 border w-fit rounded-md py-2 hover:bg-violet-600 hover:text-white px-4 transition-all ease-in-out flex gap-1 items-center justify-around dark:text-white dark:border-gray-600 dark:hover:bg-gray-800"
           >
             <IoDocumentOutline className="text-lg" />
             Resume

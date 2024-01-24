@@ -3,7 +3,8 @@ import React from 'react'
 const Projects = () => {
   return (
     <div className='min-h-screen' id='Projects'>
-      projects
+      projects page
+      yet to design
     </div>
   )
 }
