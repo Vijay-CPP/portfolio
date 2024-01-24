@@ -5,21 +5,21 @@ import { useScroll } from "framer-motion";
 const AboutMe = () => {
   let EDUCATION = [
     {
-      year: "2020-2024",
+      year: "2020 - 2024",
       instituteName: "Haldia Institute of Technology",
       courseName: "B.Tech (Hons) in Electrical Engg",
       score: "CGPA - 9.41",
     },
     {
-      year: "2020-2024",
-      instituteName: "Haldia Institute of Technology",
-      courseName: "B.Tech (Hons) in Electrical Engg",
-      score: "CGPA - 9.41",
+      year: "2018 - 2020",
+      instituteName: "D A V Public School",
+      courseName: "CBSE - Class 12th",
+      score: "Percentage - 93.8 %",
     },
     {
-      year: "2020-2024",
-      instituteName: "Haldia Institute of Technology",
-      courseName: "B.Tech (Hons) in Electrical Engg",
+      year: "2015 - 2018",
+      instituteName: "Vivekananda Mission School",
+      courseName: "CISCE - Class 10th",
       score: "CGPA - 9.41",
     },
   ];
@@ -82,7 +82,7 @@ const AboutMe = () => {
                 {EDUCATION.slice(0, eduLength).map((data, idx) => {
                   return (
                     <div
-                      class="flex-shrink-0 flex-grow-0 w-full md:w-fit"
+                      class="flex-shrink-0 flex-grow-0 w-full md:min-w-[40%] md:w-fit"
                       key={idx}
                     >
                       <div class="bg-gray-100 dark:bg-gray-800 rounded-lg py-4 px-5 border dark:border-gray-900 hover:shadow-md transition duration-300 ease-in-out shadow-sm">
