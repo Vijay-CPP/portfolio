@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {motion} from "framer-motion"
 
 const Skills = () => {
   const SKILLS = {
@@ -12,7 +13,16 @@ const Skills = () => {
       "Redux",
     ],
     Backend: ["Node.js", "Express.js", "Firebase", "MongoDB", "SQL", "GraphQL"],
-    Others: ["C/C++", "Python", "Git", "GitHub", "Googling", "Vercel", "Netlify", "Heroku"],
+    Others: [
+      "C/C++",
+      "Python",
+      "Git",
+      "GitHub",
+      "Googling",
+      "Vercel",
+      "Netlify",
+      "Heroku",
+    ],
   };
 
   const SKILL_CATEGORY = Object.keys(SKILLS);
@@ -22,7 +32,7 @@ const Skills = () => {
 
   return (
     <div className="container mx-auto min-h-fit py-20" id="Skills">
-      <h2 className="text-4xl text-center text-gray-800 dark:text-white font-robotoMono">
+      <h2 className="text-3xl md:text-4xl text-center text-gray-800 dark:text-white font-robotoMono ">
         Tech Stack
       </h2>
 
@@ -30,7 +40,7 @@ const Skills = () => {
         {SKILL_CATEGORY.map((element, idx) => {
           return (
             <div
-            key={idx}
+              key={idx}
               onClick={() => setIndex(idx)}
               className={` ${
                 index === idx
@@ -46,7 +56,14 @@ const Skills = () => {
 
       <div className="flex flex-wrap w-[90vw] md:w-[60vw] lg:w-[40vw] mx-auto mt-6 gap-2 justify-center">
         {SKILLS_NAMES[index].map((element, idx) => {
-          return <div key={idx} className="px-8 py-3 rounded-md hover:bg-violet-500 hover:text-white transition-all ease-in-out dark:hover:bg-violet-500 bg-gray-200 dark:bg-gray-700 dark:text-white hover:-translate-y-[1px] duration-300">{element}</div>;
+          return (
+            <div
+              key={idx}
+              className="px-8 py-3 rounded-md hover:bg-violet-500 hover:text-white transition-all ease-in-out dark:hover:bg-violet-500 bg-gray-200 dark:bg-gray-700 dark:text-white hover:-translate-y-[1px] duration-300"
+            >
+              {element}
+            </div>
+          );
         })}
       </div>
     </div>

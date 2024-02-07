@@ -8,6 +8,10 @@ export default {
     extend: {
       fontFamily: {
         robotoMono: ['Roboto Mono', "monospace"]
+      },
+      backgroundImage: {
+        'home-bg': "url('./src/assets/bg.jpg')",
+        'no-bg': "url('')",
       }
     },
   },

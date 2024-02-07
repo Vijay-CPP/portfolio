@@ -8,13 +8,16 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Footer from "./components/Footer";
 import { useTheme } from "./context/themeContext";
+import FloatIcons from "./components/FloatIcons";
 
 function App() {
   const { theme } = useTheme();
 
   return (
-    <div className={`${theme === "dark" ? "dark" : ""}`}>
-      <div className="dark:bg-gray-900 transition-all ease-in-out">
+    <div className={`${theme === "dark" ? "dark" : "light"}`}>
+      <FloatIcons/>
+
+      <div className="dark:bg-gray-900 transition-colors ease-in-out duration-500">
         <Navbar />
         <Home />
         <AboutMe />

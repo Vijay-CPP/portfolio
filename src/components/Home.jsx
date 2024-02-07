@@ -47,8 +47,8 @@ const Home = () => {
 
   return (
     <div
-      className="flex flex-col-reverse container mx-auto min-h-screen lg:flex-row lg:justify-around justify-center items-center gap-8 lg:gap-0 py-20"
-      id="Home"
+      className="flex flex-col-reverse container mx-auto min-h-screen lg:flex-row lg:justify-around justify-center items-center gap-8 lg:gap-0 py-20 "
+      id="Home" 
     >
       <div className="flex flex-col lg:w-[45%] w-[85%]">
         <div className="flex items-center gap-2 mb-1">
