@@ -2,14 +2,43 @@ import React, { useState } from "react";
 import contactImg from "../assets/contact.png";
 import { GrSend } from "react-icons/gr";
 import Links from "./Links";
+import { ImSpinner8 } from "react-icons/im";
+import { toast } from "react-toastify";
+import { useTheme } from "../context/themeContext";
 
 const Contact = () => {
+  const { theme } = useTheme();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [sending, setSending] = useState(false);
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
+    setSending(true);
     e.preventDefault();
+
+    const dataObj = {
+      name,
+      email,
+      message,
+    };
+
+    try {
+      let url = import.meta.env.VITE_FORM_POST_URL;
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dataObj),
+      });
+      await response.json();
+      toast("Will contact you soon!", { theme: theme });
+    } catch (error) {
+      toast.error(error.message + "! Try Again later!", { theme: theme });
+    } finally {
+      setSending(false);
+    }
 
     setName("");
     setEmail("");
@@ -35,8 +64,7 @@ const Contact = () => {
             className="w-[80vw] md:w-[30vw] "
             alt="contact-img"
           />
-          <Links/>
-
+          <Links />
         </div>
 
         {/* Form */}
@@ -72,12 +100,20 @@ const Contact = () => {
             ></textarea>
             <button
               type="submit"
+              disabled={sending ? true : false}
               className="flex gap-1 items-center justify-center hover:bg-violet-700 transition-all ease-in-out bg-violet-500 text-white rounded-md py-2 px-4 w-max focus:outline-none"
             >
-              Submit <GrSend className="ml-2" />
+              {!sending ? (
+                <>
+                  Submit <GrSend className="ml-2" />
+                </>
+              ) : (
+                <>
+                  Submitting <ImSpinner8 className="ml-2 animate-spin" />
+                </>
+              )}
             </button>
           </form>
-
         </div>
       </div>
     </div>

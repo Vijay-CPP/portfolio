@@ -1,4 +1,5 @@
 import "./App.css";
+import React from "react";
 import AboutMe from "./components/AboutMe";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";
@@ -9,6 +10,8 @@ import Skills from "./components/Skills";
 import Footer from "./components/Footer";
 import { useTheme } from "./context/themeContext";
 import FloatIcons from "./components/FloatIcons";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const { theme } = useTheme();
@@ -22,11 +25,13 @@ function App() {
         <Home />
         <AboutMe />
         <Skills />
-        <Projects/>
-        <Experience/>
+        {/* <Projects/> */}
+        {/* <Experience/> */}
         <Contact/>
         <Footer/>
       </div>
+
+      <ToastContainer/>
     </div>
   );
 }

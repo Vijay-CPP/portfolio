@@ -62,7 +62,7 @@ const Navbar = () => {
                 isDynamic={true}
                 key={idx}
               >
-                <h1 className="hover:text-violet-600 transition-colors dark:text-gray-100 dark:hover:text-violet-500">
+                <h1 className="hover:text-violet-600 cursor-pointer transition-colors dark:text-gray-100 dark:hover:text-violet-500">
                   {ele}
                 </h1>
               </ScrollLink>
@@ -77,7 +77,7 @@ const Navbar = () => {
             } transition-all ease-in-out shadow-lg border`}
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           >
-            {theme === "light" ? <LuMoon /> : <FiSun />}
+            {theme === "light" ? <LuMoon className="hover:animate-pulse"/> : <FiSun className="hover:animate-pulse"/>}
           </div>
         </div>
 

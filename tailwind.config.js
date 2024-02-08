@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: [
     "./index.html",
@@ -9,10 +10,6 @@ export default {
       fontFamily: {
         robotoMono: ['Roboto Mono', "monospace"]
       },
-      backgroundImage: {
-        'home-bg': "url('./src/assets/bg.jpg')",
-        'no-bg': "url('')",
-      }
     },
   },
   darkMode: "class",
