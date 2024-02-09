@@ -23,6 +23,8 @@ const Contact = () => {
       message,
     };
 
+    console.log(dataObj);
+
     try {
       let url = import.meta.env.VITE_FORM_POST_URL;
       const response = await fetch(url, {

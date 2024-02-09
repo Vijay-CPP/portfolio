@@ -10,7 +10,7 @@ const Footer = () => {
         <a href="https://icons8.com" className="md:text-sm text-xs w-12 mx-4 md:w-fit text-gray-400">
           Icons by Icons8
         </a>
-        <h3 className="flex gap-2 items-center justify-center hover:text-violet-500 transition-all ease-in-out duration-500 dark:text-gray-400 dark:hover:text-violet-400 text-gray-700  font-robotoMono">
+        <h3 className="flex gap-2 items-center justify-center hover:text-violet-500 transition-all ease-in-out duration-500 dark:text-gray-400 dark:hover:text-violet-400 text-gray-700  font-robotoMono text-xs">
           Made with by <ImHeart className="hover:animate-pulse duration-200"/> Vijay
         </h3>
 
