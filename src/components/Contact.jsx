@@ -27,6 +27,7 @@ const Contact = () => {
 
     try {
       let url = import.meta.env.VITE_FORM_POST_URL;
+      console.log(url)
       const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -35,6 +36,7 @@ const Contact = () => {
         body: JSON.stringify(dataObj),
       });
       await response.json();
+
       toast("Will contact you soon!", { theme: theme });
     } catch (error) {
       toast.error(error.message + "! Try Again later!", { theme: theme });
