@@ -53,12 +53,12 @@ const Home = () => {
       <div className="flex flex-col lg:w-[45%] w-[85%]">
         <div className="flex items-center gap-2 mb-1">
           <img src={wavingHand} className="w-8 h-8" alt="👋" />
-          <h2 className="lg:text-lg dark:text-gray-200">Hey There!</h2>
+          <h2 className="lg:text-lg transition-colors ease-in-out duration-500 dark:text-gray-200">Hey There!</h2>
         </div>
-        <h1 className=" text-4xl lg:text-7xl font-bold text-gray-800 dark:text-white">
+        <h1 className=" text-4xl lg:text-7xl font-bold text-gray-800 dark:text-white transition-colors ease-in-out duration-500">
           I'm Vijay
         </h1>
-        <div className="flex items-baseline my-6 gap-2 dark:text-gray-50">
+        <div className="flex items-baseline my-6 gap-2 dark:text-gray-50 transition-colors ease-in-out duration-500">
           <h2 className="text-xl">I am into </h2>
           <Typewriter
             options={{
@@ -68,13 +68,13 @@ const Home = () => {
               deleteSpeed: 50,
               delay: 50,
               wrapperClassName:
-                "text-violet-700 dark:text-violet-500 text-xl md:text-3xl font-medium",
+                "text-violet-700 dark:text-violet-500 text-xl md:text-3xl font-medium transition-colors ease-in-out duration-500",
               cursorClassName:
-                "text-violet-700 dark:text-violet-500 text-xl md:text-3xl",
+                "text-violet-700 dark:text-violet-500 text-xl md:text-3xl transition-colors ease-in-out duration-500",
             }}
           />
         </div>
-        <p className="text-gray-600 dark:text-gray-400">
+        <p className="text-gray-600 dark:text-gray-400 transition-colors ease-in-out duration-500 ">
           I create easy-to-use websites that match client needs, paying close
           attention to details, scalability, and speed. Whether you need a
           brand-new web application built from scratch or an existing one
@@ -84,7 +84,7 @@ const Home = () => {
 
         <div className="flex justify-start items-center gap-3 mt-5">
           <ScrollLink
-            className="w-fit text-sm md:text-base py-2 px-4 cursor-pointer flex items-center gap-1 rounded-md bg-violet-600 hover:bg-violet-700 dark:bg-violet-700 hover:dark:bg-violet-800 transition-colors group text-white"
+            className="w-fit text-sm md:text-base py-2 px-4 cursor-pointer flex items-center gap-1 rounded-md bg-violet-600 hover:bg-violet-700 dark:bg-violet-700 hover:dark:bg-violet-800 transition-colors ease-in-out duration-500 group text-white"
             to={"About"}
             offset={-60}
             smooth={true}
@@ -98,7 +98,7 @@ const Home = () => {
           <a
             href={""}
             target="_blank"
-            className="md:text-base font-semibold text-violet-600 dark:bg-gray-700 border-violet-600 border w-fit rounded-md py-2 hover:bg-violet-600 hover:text-white px-4 transition-all ease-in-out flex gap-1 items-center justify-around dark:text-white dark:border-gray-600 dark:hover:bg-gray-800"
+            className="md:text-base font-semibold text-violet-600 dark:bg-gray-700 border-violet-600 border w-fit rounded-md py-2 hover:bg-violet-600 hover:text-white px-4 transition-colors ease-in-out duration-500 flex gap-1 items-center justify-around dark:text-white dark:border-gray-600 dark:hover:bg-gray-800"
           >
             <IoDocumentOutline className="text-lg" />
             Resume

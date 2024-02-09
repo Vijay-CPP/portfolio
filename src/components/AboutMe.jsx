@@ -42,32 +42,32 @@ const AboutMe = () => {
         className="container mx-auto min-h-[100vh] md:min-h-fit py-10"
         id="About"
       >
-        <h2 className="text-3xl md:text-4xl text-center font-robotoMono text-gray-800 dark:text-white">
+        <h2 className="text-3xl md:text-4xl text-center font-robotoMono text-gray-800 dark:text-white transition-colors ease-in-out duration-500">
           About Me
         </h2>
 
         <div className="w-full lg:w-11/12 2xl:w-4/5 mt-6 lg:mt-8 mx-auto flex flex-col md:gap-4 lg:flex-row justify-center">
-          <div className="p-3 h-fit w-56 md:w-2/5 lg:w-72 bg-white shadow-md dark:bg-gray-800 flex flex-col gap-2 items-center rounded-2xl mx-auto lg:mx-16 hover:-translate-y-2 transition-transform duration-300 lg:-rotate-3">
+          <div className="p-3 h-fit w-56 md:w-2/5 lg:w-72 bg-white shadow-md dark:bg-gray-800 flex flex-col gap-2 items-center rounded-2xl mx-auto lg:mx-16 hover:-translate-y-2 transition-all lg:-rotate-3 ease-in-out duration-500">
             <img
               src={profilePic}
               alt="profile-pic"
               loading={"lazy"}
               className="w-full h-60 md:h-72 rounded-2xl object-cover grayscale hover:grayscale-0 transition-all bg-violet-100"
             />
-            <span className="font-medium font-sans dark:text-white">
+            <span className="font-medium font-sans dark:text-white transition-colors ease-in-out duration-500">
               {"< I Build Stuff 🚀 />"}
             </span>
           </div>
 
           <div className="flex-1 text-left mx-6 mt-8 md:mt-0 md:mx-0 md:p-6">
             <div className="flex flex-col gap-2.5">
-              <p className="text-3xl font-semibold text-gray-800 dark:text-white">
+              <p className="text-3xl font-semibold text-gray-800 dark:text-white transition-colors ease-in-out duration-500">
                 T Vijay Kumar
               </p>
-              <p className="text-violet-800 w-fit rounded py-1 px-2 text-sm dark:text-violet-400 bg-violet-50 dark:bg-violet-900/10">
+              <p className="text-violet-800 w-fit rounded py-1 px-2 text-sm dark:text-violet-400 bg-violet-50 dark:bg-violet-900/10 transition-colors ease-in-out duration-500">
                 Full Stack Developer
               </p>
-              <p className="text-sm md:text-base my-2 text-gray-600 dark:text-gray-300 text-justify">
+              <p className="text-sm md:text-base my-2 text-gray-600 dark:text-gray-300 text-justify transition-colors ease-in-out duration-500">
                 I'm passionate about creating beautiful, functional, and
                 user-friendly websites and applications. Beyond technical
                 skills, I bring a dynamic and collaborative problem-solving
@@ -77,7 +77,7 @@ const AboutMe = () => {
               </p>
 
               <div className="py-2">
-                <h1 className="text-xl text-violet-700 dark:text-violet-400 font-robotoMono pb-4">
+                <h1 className="text-xl text-violet-700 dark:text-violet-400 font-robotoMono pb-4 transition-colors ease-in-out duration-500">
                   Education
                 </h1>
                 <div className="flex flex-wrap gap-5">
@@ -87,17 +87,17 @@ const AboutMe = () => {
                         className="flex-shrink-0 flex-grow-0 w-full md:min-w-[300px] lg:w-fit"
                         key={idx}
                       >
-                        <div className="bg-gray-100 dark:bg-gray-800 rounded-lg py-4 px-5 border dark:border-gray-900 hover:shadow-md shadow-sm">
-                          <p className="text-gray-700 dark:text-gray-300 text-md font-semibold">
+                        <div className="bg-gray-100 dark:bg-gray-800 rounded-lg py-4 px-5 border dark:border-gray-900 hover:shadow-md shadow-sm transition-colors ease-in-out duration-500">
+                          <p className="text-gray-700 dark:text-gray-300 text-md font-semibold transition-colors ease-in-out duration-500">
                             {data.year}
                           </p>
-                          <p className="text-gray-700 dark:text-gray-300 text-lg">
+                          <p className="text-gray-700 dark:text-gray-300 text-lg transition-colors ease-in-out duration-500">
                             {data.instituteName}
                           </p>
-                          <p className="text-gray-700 text-sm dark:text-gray-300">
+                          <p className="text-gray-700 text-sm dark:text-gray-300 transition-colors ease-in-out duration-500">
                             {data.courseName}
                           </p>
-                          <p className="text-gray-700 dark:text-gray-300">
+                          <p className="text-gray-700 dark:text-gray-300 transition-colors ease-in-out duration-500">
                             {data.score}
                           </p>
                         </div>
@@ -107,7 +107,7 @@ const AboutMe = () => {
                 </div>
 
                 <motion.button
-                  className="text-gray-700 border border-gray-400 px-3 py-1 rounded-md mt-4 dark:text-gray-400 dark:border-gray-700"
+                  className="text-gray-700 border border-gray-400 px-3 py-1 rounded-md mt-4 dark:text-gray-400 dark:border-gray-700 transition-colors ease-in-out duration-500"
                   onClick={(e) => handleEduClick(e)}
                 >
                   {eduLength === 2 ? "Show All" : "Ok I got it!"}

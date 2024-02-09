@@ -29,7 +29,7 @@ const Navbar = () => {
     "About",
     "Skills",
     "Projects",
-    "Experience",
+    // "Experience",
     "Contact",
   ];
 
@@ -99,9 +99,9 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`md:hidden flex absolute top-0 w-screen h-screen ${
+          className={`md:hidden flex transition-all absolute top-0 w-screen h-screen ${
             menu ? "right-0" : "right-[-100%]"
-          } ease-in-out duration-300`}
+          } ease-in-out duration-500`}
         >
           <div className="w-[40%]" onClick={() => setMenu(false)}></div>
           <div className="flex w-full flex-col backdrop-filter backdrop-blur-sm gap-6 text-md text-gray-700 items-start font-robotoMono bg-gray-100 border-l dark:border-none dark:bg-gray-700 dark:text-gray-50 top-10 left-5 pl-10">
