@@ -46,10 +46,10 @@ const Projects = () => {
           Projects
         </h1>
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 flex-wrap mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5 mx-auto w-[85%] lg:w-[80%]">
           {PROJECTS.slice(0, length).map((element, idx) => {
             return (
-              <div key={idx} className="w-[85%] md:w-[40%] lg:w-[25%] p-5 bg-gray-200 dark:bg-gray-800 rounded-lg flex flex-col gap-2 shadow-sm transition-colors ease-in-out duration-500">
+              <div key={idx} className="p-5 bg-gray-200 dark:bg-gray-800 rounded-lg flex flex-col gap-2 shadow-sm transition-colors ease-in-out duration-500">
                 {/* Image */}
                 <img
                   src={`https://drive.google.com/uc?export=view&id=${element.imageID}`}

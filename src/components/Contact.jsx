@@ -3,11 +3,13 @@ import contactImg from "../assets/contact.png";
 import { GrSend } from "react-icons/gr";
 import Links from "./Links";
 import { ImSpinner8 } from "react-icons/im";
-import { toast } from "react-toastify";
+import toast from "react-hot-toast";
 import { useTheme } from "../context/themeContext";
+
 
 const Contact = () => {
   const { theme } = useTheme();
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -23,6 +25,18 @@ const Contact = () => {
       message,
     };
 
+    const toastLightThemeObj = {
+      borderRadius: "10px",
+      background: "#fff",
+      color: "#6d28d9",
+    };
+
+    const toastDarkThemeObj = {
+      borderRadius: "10px",
+      background: "#374151",
+      color: "#fff",
+    };
+
     try {
       let url = import.meta.env.VITE_FORM_POST_URL;
       const response = await fetch(url, {
@@ -33,10 +47,13 @@ const Contact = () => {
         body: JSON.stringify(dataObj),
       });
       await response.json();
-
-      toast("Will contact you soon!", { theme: theme });
+      toast.success("Will contact you soon!", {
+        style: theme == "light" ? toastLightThemeObj : toastDarkThemeObj,
+      });
     } catch (error) {
-      toast.error(error.message + "! Try Again later!", { theme: theme });
+      toast.error(error.message + "! Try Again later!", {
+        style: theme == "light" ? toastLightThemeObj : toastDarkThemeObj,
+      });
     } finally {
       setSending(false);
     }

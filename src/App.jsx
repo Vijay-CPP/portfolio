@@ -10,28 +10,32 @@ import Skills from "./components/Skills";
 import Footer from "./components/Footer";
 import { useTheme } from "./context/themeContext";
 import FloatIcons from "./components/FloatIcons";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const { theme } = useTheme();
 
+
   return (
     <div className={`${theme === "dark" ? "dark" : "light"}`}>
-      <FloatIcons/>
+      <FloatIcons />
 
       <div className="dark:bg-gray-900 transition-colors ease-in-out duration-500">
         <Navbar />
         <Home />
         <AboutMe />
         <Skills />
-        <Projects/>
+        <Projects />
         {/* <Experience/> */}
-        <Contact/>
-        <Footer/>
+        <Contact />
+        <Footer />
       </div>
 
-      <ToastContainer/>
+      <Toaster
+        toastOptions={{
+          duration: 4000,
+        }}
+      />
     </div>
   );
 }

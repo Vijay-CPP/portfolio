@@ -18,7 +18,7 @@ const SkillCard = ({ skillLogoURL, skillName, idx }) => {
 
   return (
     <div
-      className={`w-[30%] md:w-[20%] flex flex-col justify-center items-center gap-1 p-3 rounded-lg`}
+      className={`flex flex-col justify-center items-center gap-1 p-3 rounded-lg`}
       style={{ backgroundColor: bgColor }}
     >
       <img src={skillLogoURL} className="w-[70%]" alt="" />

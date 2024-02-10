@@ -127,7 +127,7 @@ const Skills = () => {
         })}
       </div>
 
-      <div className="flex flex-wrap w-[90%] md:w-[70%] lg:w-[50%] mx-auto mt-6 gap-3 justify-center md:gap-4 xl:gap-5">
+      <div className="grid grid-cols-3 md:grid-cols-4 md:w-[65%] lg:w-[40%] gap-4 lg:gap-5 w-[90%] mx-auto">
         {SKILLS_NAMES[index].map((element, idx) => {
           return (
             <SkillCard
