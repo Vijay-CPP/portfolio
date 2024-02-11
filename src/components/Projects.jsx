@@ -1,7 +1,9 @@
 import { useScroll } from "framer-motion";
 import React, { useState } from "react";
+import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
+
   const PROJECTS = [
     {
       name: "File Orbit",
@@ -49,23 +51,7 @@ const Projects = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-5 mx-auto w-[85%] lg:w-[80%]">
           {PROJECTS.slice(0, length).map((element, idx) => {
             return (
-              <div key={idx} className="p-5 bg-gray-200 dark:bg-gray-800 rounded-lg flex flex-col gap-2 shadow-sm transition-colors ease-in-out duration-500">
-                {/* Image */}
-                <img
-                  src={`https://drive.google.com/uc?export=view&id=${element.imageID}`}
-                  alt={element.name + "-img"}
-                  className="w-[100%] rounded-lg dark:bg-gray-700 bg-white h-48 mx-auto transition-colors ease-in-out duration-500"
-                />
-                {/* Project Name */}
-                <h2 className="font-bold text-gray-700 dark:text-gray-300 text-lg transition-colors ease-in-out duration-500">{element.name}</h2>
-
-                {/* Tech Stack */}
-                <div className="flex flex-wrap gap-2">
-                  {element.techStack.map((tech, i) => {
-                    return <div className="bg-gray-50 dark:bg-gray-600 px-2 py-1 shadow-sm rounded-md text-xs md:text-sm text-gray-700 dark:text-gray-200 font-robotoMono transition-colors ease-in-out duration-500" key={i}>{tech}</div>;
-                  })}
-                </div>
-              </div>
+              <ProjectCard key={idx} element={element}/>
             );
           })}
         </div>

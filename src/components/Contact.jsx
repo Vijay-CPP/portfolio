@@ -28,7 +28,7 @@ const Contact = () => {
     const toastLightThemeObj = {
       borderRadius: "10px",
       background: "#fff",
-      color: "#6d28d9",
+      color: "#1e293b",
     };
 
     const toastDarkThemeObj = {

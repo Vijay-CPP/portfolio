@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import profilePic from "../assets/profile-pic.jpg";
-import { useScroll } from "framer-motion";
-import { motion, useAnimation } from "framer-motion";
+import EducationCard from "./EducationCard";
 
 const AboutMe = () => {
   let EDUCATION = [
@@ -83,35 +82,17 @@ const AboutMe = () => {
                 <div className="flex flex-wrap gap-5">
                   {EDUCATION.slice(0, eduLength).map((data, idx) => {
                     return (
-                      <div
-                        className="flex-shrink-0 flex-grow-0 w-full md:min-w-[300px] lg:w-fit"
-                        key={idx}
-                      >
-                        <div className="bg-gray-100 dark:bg-gray-800 rounded-lg py-4 px-5 border dark:border-gray-900 hover:shadow-md shadow-sm transition-colors ease-in-out duration-500">
-                          <p className="text-gray-700 dark:text-gray-300 text-md font-semibold transition-colors ease-in-out duration-500">
-                            {data.year}
-                          </p>
-                          <p className="text-gray-700 dark:text-gray-300 text-lg transition-colors ease-in-out duration-500">
-                            {data.instituteName}
-                          </p>
-                          <p className="text-gray-700 text-sm dark:text-gray-300 transition-colors ease-in-out duration-500">
-                            {data.courseName}
-                          </p>
-                          <p className="text-gray-700 dark:text-gray-300 transition-colors ease-in-out duration-500">
-                            {data.score}
-                          </p>
-                        </div>
-                      </div>
+                      <EducationCard key={idx} data={data}/>
                     );
                   })}
                 </div>
 
-                <motion.button
+                <button
                   className="text-gray-700 border border-gray-400 px-3 py-1 rounded-md mt-4 dark:text-gray-400 dark:border-gray-700 transition-colors ease-in-out duration-500"
                   onClick={(e) => handleEduClick(e)}
                 >
                   {eduLength === 2 ? "Show All" : "Ok I got it!"}
-                </motion.button>
+                </button>
               </div>
             </div>
           </div>
