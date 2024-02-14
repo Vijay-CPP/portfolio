@@ -9,31 +9,31 @@ const Links = () => {
   return (
     <div className="flex gap-2 flex-wrap transition-all ease-in-out">
       <a
-        href=""
+        href="https://www.linkedin.com/in/vijaytamada/"
         className="text-lg p-3 hover:-translate-y-1 transition-all ease-in-out bg-gray-500 rounded-full text-white hover:bg-violet-500 shadow-2xl"
       >
         <FaLinkedin />
       </a>
       <a
-        href=""
+        href="https://github.com/Vijay-CPP"
         className="text-lg p-3 hover:-translate-y-1 transition-all ease-in-out bg-gray-500 rounded-full text-white hover:bg-violet-500 shadow-2xl"
       >
         <FaGithub />
       </a>
       <a
-        href=""
+        href="mailto:vijaytamada02@gmail.com"
         className="text-lg p-3 hover:-translate-y-1 transition-all ease-in-out bg-gray-500 rounded-full text-white hover:bg-violet-500 shadow-2xl"
       >
         <FiMail />
       </a>
       <a
-        href=""
+        href="https://www.instagram.com/yours_truly_vijay_/"
         className="text-lg p-3 hover:-translate-y-1 transition-all ease-in-out bg-gray-500 rounded-full text-white hover:bg-violet-500"
       >
         <FaInstagram />
       </a>
       <a
-        href=""
+        href="https://drive.google.com/file/d/1IwQ3RwL8_X9j2AncmmA65oUez8t6x1PM/view?usp=drive_link"
         className="flex gap-2 items-center justify-center  bg-gray-500 text-white rounded-md px-3 hover:bg-violet-500 transition-all ease-in-out"
       >
         <IoDocumentOutline />
