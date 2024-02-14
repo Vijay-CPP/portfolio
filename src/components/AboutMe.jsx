@@ -70,10 +70,10 @@ const AboutMe = () => {
               user-friendly websites and applications. Beyond technical skills,
               I bring a dynamic and collaborative problem-solving approach.
               Connect with me on LinkedIn or explore my coding profiles on{" "}
-              <a href="https://leetcode.com/vijay_cpp/" className="font-bold text-purple-600">
+              <a href="https://leetcode.com/vijay_cpp/" className="font-bold text-violet-500">
                 LeetCode
               </a>
-              , <a href="https://github.com/Vijay-CPP" className="font-bold text-purple-600">GitHub</a>, and <a href="https://auth.geeksforgeeks.org/user/vijay_cpp" className="font-bold text-purple-600">GFG Practice</a> for a
+              , <a href="https://github.com/Vijay-CPP" className="font-bold text-violet-500">GitHub</a>, and <a href="https://auth.geeksforgeeks.org/user/vijay_cpp" className="font-bold text-violet-500">GFG Practice</a> for a
               closer look at my passion, skills, and achievements.
             </p>
 
