@@ -104,7 +104,7 @@ const Navbar = () => {
           } ease-in-out duration-500`}
         >
           <div className="w-[40%]" onClick={() => setMenu(false)}></div>
-          <div className="flex w-full flex-col backdrop-filter backdrop-blur-sm gap-6 text-md text-gray-700 items-start font-robotoMono bg-gray-100 border-l dark:border-none dark:bg-gray-700 dark:text-gray-50 top-10 left-5 pl-10">
+          <div className="flex w-full flex-col gap-6 text-md text-gray-700 items-start font-robotoMono bg-gray-200 border-l dark:border-none dark:bg-gray-700 dark:text-gray-50 top-10 left-5 pl-10">
             <MdClose
               className="text-2xl ml-auto mt-7 mr-7"
               onClick={() => setMenu(false)}
